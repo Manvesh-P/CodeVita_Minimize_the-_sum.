@@ -1,0 +1,22 @@
+# CodeVita Minimize the sum.
+
+list1 = []
+
+N,K = map(int, input("Enter the number of elements and the total number of allowed operations with space b/w them:").split(' '))
+
+for i in range(0, N):
+    list1.append(int(input("Enter the element:")))
+    
+ini_sum = sum(list1)
+
+print("initial sum: ",ini_sum)
+
+for i in range(0, K):
+    a = max(list1) 
+    ind = list1.index(a)
+    a = a // 2
+    list1[ind] = a
+    
+# print(list1)
+
+print("Final sum: ",sum(list1))
